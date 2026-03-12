@@ -96,6 +96,20 @@ git config user.name "Your Name"
 git config user.email "your-email@example.com"
 ```
 
+필수 도구 설치:
+
+```bash
+./install_tools.sh
+```
+
+GitHub 저장소 생성과 푸시:
+
+```bash
+./publish_github.sh
+./publish_github.sh --public
+./publish_github.sh --name my-verilog-notes
+```
+
 ## 시뮬레이션 실행 예시
 
 환경에 `iverilog`, `vvp`, `gtkwave` 가 있을 때:
@@ -122,3 +136,17 @@ make sim
 make wave
 make clean
 ```
+
+## 자동화 스크립트
+
+- `install_tools.sh`
+  Ubuntu 기준으로 `iverilog`, `gtkwave`, `gh` 를 설치한다.
+
+- `run_sim.sh`
+  시뮬레이션 실행 및 선택적으로 GTKWave를 연다.
+
+- `setup_origin.sh`
+  이미 존재하는 GitHub 저장소 URL을 `origin` 에 연결한다.
+
+- `publish_github.sh`
+  `gh` 가 로그인된 상태라면 GitHub 저장소를 생성하고 현재 브랜치를 푸시한다.
