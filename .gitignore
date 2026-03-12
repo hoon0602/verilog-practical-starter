@@ -1,0 +1,10 @@
+# Simulation artifacts
+build/
+*.out
+*.vcd
+*.vvp
+
+# Editor / OS noise
+*.swp
+*.swo
+.DS_Store
